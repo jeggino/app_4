@@ -2,7 +2,19 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+from streamlit_option_menu import option_menu  # pip install streamlit-option-menu
+
+
 st.title('Uber pickups in NYC')
+
+# --- HIDE STREAMLIT STYLE ---
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
 
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
